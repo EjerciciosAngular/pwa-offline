@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Network } from '@ngx-pwa/offline';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'pwa-offline';
+  networkStatus$;
+  constructor(
+    protected network: Network
+  ) {
+    this.networkStatus$ = this.network.onlineChanges;
+  }
 }

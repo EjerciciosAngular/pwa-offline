@@ -1,1 +1,11 @@
+@import 'tailwindcss/base';
+
+@import 'tailwindcss/components';
+
+@import 'tailwindcss/utilities';
 /* You can add global styles to this file, and also import other style files */
+
+.c-hero-gradient-bg {
+    background-image: -webkit-gradient(linear,left top,right top,color-stop(60%,#CDCDCD),to(transparent));
+    background-image: linear-gradient(90deg,#CDCDCD 50%,transparent);
+}
