@@ -9,9 +9,28 @@ import { Network } from '@ngx-pwa/offline';
 export class AppComponent {
   title = 'pwa-offline';
   networkStatus$;
+
+  loading: boolean = false;
+  isSidebarOpen: boolean = false;
+  isSettingsPanelOpen: boolean = false;
+  isSearchBoxOpen: boolean = false;
+
+  isOpen: boolean = false;
+
   constructor(
     protected network: Network
   ) {
     this.networkStatus$ = this.network.onlineChanges;
   }
+
+  // toggle() {
+  //   this.show = !this.show;
+  // }
+
+  toggleSidbarMenu() {
+    this.isSidebarOpen = !this.isSidebarOpen;
+  }
+
+
+
 }
